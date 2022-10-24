@@ -3,8 +3,8 @@ local M = {}
 -- Check Tcl syntax and populate the quickfix list with errors.
 M.nagelfar = function(target)
   -- Save pre-existing settings to restore at the end.
-  local old_makeprg = vim.bo.makeprg
-  local old_pattern = vim.bo.errorformat
+  local old_makeprg = vim.bo.makeprg     or vim.o.makeprg
+  local old_pattern = vim.bo.errorformat or vim.o.errorformat
 
   -- This `-H` flag is necessary to prepend errors with line numbers.
   vim.bo.makeprg = 'nagelfar -H'
