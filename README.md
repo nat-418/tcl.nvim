@@ -9,7 +9,7 @@ This is a Neovim plugin to aid Tcl/Tk development. It includes:
 Thanks
 ------
 
-* [Peter Spjuth](https://wiki.tcl-lang.org/page/Peter+Spjuth) for Naglefar
+* [Peter Spjuth](https://wiki.tcl-lang.org/page/Peter+Spjuth) for Nagelfar
 * [flukus](https://github.com/flukus) for this
 [write-up ](https://flukus.github.io/vim-errorformat-demystified.html)
 on how to format Vim/Neovim's `set errorformat=$ARRAY` arrays.
