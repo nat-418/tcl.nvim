@@ -24,7 +24,7 @@ This plugin provides a few user commands:
 
 |      Command Name            |          Description                |
 | ---------------------------- | ----------------------------------- |
-| `:Nagelfar {path|\%}`        | Run the syntax checker on some file |
+| `:Nagelfar path or %`        | Run the syntax checker on some file |
 
 
 Thanks
