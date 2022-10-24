@@ -4,6 +4,11 @@ This is a Neovim plugin to aid Tcl/Tk development. It includes:
 
 * Support for the [Nagelfar](https://nagelfar.sourceforge.net/) syntax checker
 
+Requirements
+------------
+* Nvim v0.8.0 or newer
+* [nvim-lint](https://github.com/mfussenegger/nvim-lint)
+
 Installation
 ------------
 Use you preferred method to place this repository on your runtime path.
