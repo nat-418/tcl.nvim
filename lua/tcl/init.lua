@@ -28,7 +28,7 @@ M.nagelfar = function(target)
 end
 
 M.setup = function()
-  vim.api.nvim_create_user_command(
+  return vim.api.nvim_create_user_command(
     'Nagelfar',
     function(args) M.nagelfar(args.args) end,
     {nargs = 1}
