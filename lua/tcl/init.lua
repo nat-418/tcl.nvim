@@ -10,13 +10,15 @@ M.nagelfar = function(target)
   vim.bo.makeprg = 'nagelfar -H'
 
   -- Parses `$ nagelfar -H $target` output for `:make`.
-  vim.bo.errorformat = table.concat({
+  local pattern = table.concat({
     '%E%f: %l: %t %m',
     '%Z%f%.%#',
     '%C %.%m',
     '%-GChecking file %f',
     '%C%.%#'
   }, ',')
+
+  vim.bo.errorformat = pattern
 
   vim.cmd.make(target) -- Populate the quickfix list with results.
 
@@ -28,9 +30,11 @@ M.nagelfar = function(target)
 end
 
 M.setup = function()
-  return vim.api.nvim_create_user_command(
+  vim.api.nvim_create_user_command(
     'Nagelfar',
     function(args) M.nagelfar(args.args) end,
     {nargs = 1}
   )
+
+  return true
 end
