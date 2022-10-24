@@ -22,7 +22,7 @@ Usage
 
 This plugin provides a few user commands:
 
-|      Command Name            |          Description                |
+|        Command               |          Description                |
 | ---------------------------- | ----------------------------------- |
 | `:Nagelfar {path\|%}`        | Run the syntax checker on some file |
 
