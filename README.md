@@ -35,4 +35,4 @@ Thanks
 * [flukus](https://github.com/flukus) for this
 [write-up ](https://flukus.github.io/vim-errorformat-demystified.html)
 on how to format Vim/Neovim's `set errorformat=$ARRAY` arrays.
-
+* [Mathias Fußenegger](https://zignar.net) for nvim-lint.
