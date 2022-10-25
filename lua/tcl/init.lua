@@ -1,5 +1,27 @@
 local M = {}
 
+M.man = function(word)
+  local ui     = vim.api.nvim_list_uis()[1]
+  local width  = 72
+  local height = 25
+  vim.cmd('let $MANWIDTH = ' .. width)
+  if pcall(vim.cmd.Man, word) then
+    vim.api.nvim_win_set_config(0, {
+      relative = 'editor',
+      width    = width,
+      height   = height,
+      col      = (ui.width / 2)  - (width / 2),
+      row      = (ui.height / 2) - (height / 2),
+      anchor   = 'NW',
+      style    = 'minimal',
+      border   = 'rounded'
+    })
+    return true
+  end
+  print('No man page found')
+  return false
+end
+
 -- Check Tcl syntax and populate the quickfix list with errors.
 M.nagelfar = function(target)
   -- Save pre-existing settings to restore at the end.
@@ -28,6 +50,17 @@ M.nagelfar = function(target)
 end
 
 M.setup = function()
+  require('lint').linters_by_ft = {
+    tcl = {'nagelfar',}
+  }
+
+  vim.api.nvim_create_autocmd(
+    {'BufEnter', 'BufWritePost'},
+    {callback = function() require('lint').try_lint() end}
+  )
+
+  vim.keymap.set({'n'}, 'K', function() M.man(vim.fn.expand('<cword>')) end)
+
   vim.api.nvim_create_user_command(
     'Nagelfar',
     function(args) M.nagelfar(args.args) end,
