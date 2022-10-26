@@ -3,7 +3,7 @@ local M = {}
 M.man = function(word)
   local ui     = vim.api.nvim_list_uis()[1]
   local width  = 72
-  local height = 25
+  local height = 40
   vim.cmd('let $MANWIDTH = ' .. width)
   if pcall(vim.cmd.Man, word) then
     vim.api.nvim_win_set_config(0, {
