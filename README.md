@@ -1,5 +1,5 @@
-tcl.nvim
-========
+tcl.nvim 🪶
+===========
 This is a Neovim plugin to aid Tcl/Tk development. It includes:
 
 * Support for the [Nagelfar](https://nagelfar.sourceforge.net/) syntax checker
