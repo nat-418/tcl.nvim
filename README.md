@@ -3,7 +3,7 @@ tcl.nvim 🪶
 This is a Neovim plugin to aid Tcl/Tk development. It includes:
 
 * Support for the [Nagelfar](https://nagelfar.sourceforge.net/) syntax checker
-* Pretty-printing of Tcl manpages, eg., using `k` on some keyword.
+* Pretty-printing of Tcl manpages, e.g., using `k` on some keyword.
 
 Requirements
 ------------
