@@ -12,8 +12,10 @@ Requirements
 
 Installation
 ------------
-Use you preferred method to place this repository on your runtime path.
-I recommend putting it in the `opt/` plugins directory.
+```sh
+$ git clone --depth 1 https://github.com/nat-418/bufala.nvim ~/.local/share/nvim/site/pack/bufala/start/bufala.nvim
+```
+
 Then add this code to your `ftplugins/tcl.lua` file:
 
 ```lua
