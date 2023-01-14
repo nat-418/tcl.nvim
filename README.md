@@ -13,7 +13,7 @@ Requirements
 Installation
 ------------
 ```sh
-$ git clone --depth 1 https://github.com/nat-418/bufala.nvim ~/.local/share/nvim/site/pack/bufala/start/bufala.nvim
+$ git clone --depth 1 https://github.com/nat-418/tcl.nvim ~/.local/share/nvim/site/pack/tcl/start/tcl.nvim
 ```
 
 Then add this code to your `ftplugins/tcl.lua` file:
